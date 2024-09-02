@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function() {
+    function moveNavbarItemsToSidebar() {
+        if (window.innerWidth <= 768) { // Verifica se a largura da tela é 768px ou menor
+            const menuItems = document.querySelector('.navbar .menu ul');
+            const actions = document.querySelector('.navbar .actions');
+            const sidebar = document.getElementById('sidebar');
+
+            sidebar.appendChild(menuItems); // Move os itens do menu para a sidebar
+            sidebar.appendChild(actions); // Move as ações (login, carrinho, etc.) para a sidebar
+        }
+    }
+
+    // Chama a função ao carregar a página
+    moveNavbarItemsToSidebar();
+
+    // Reaplica a lógica ao redimensionar a tela
+    window.addEventListener('resize', moveNavbarItemsToSidebar);
+});
+
+
 function toggleSidebar() {
     var sidebar = document.getElementById("sidebar");
     var body = document.body;
