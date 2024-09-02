@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>TechBlock - Produtos</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="icon" href="imagens/logo.png" type="Logo">
+    <script src="script.js"></script>
+</head>
+<body>
+   <!-- Cabeçalho da página -->
+   <header class="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Logo"></a>
+        <!-- Menu de navegação -->
+        <nav class="menu">
+            <ul>
+                <!-- Links do menu -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Dropdown de Produtos -->
+                <div class="toggle-btn" onclick="toggleSidebar()">
+                    <img src="imagens/menu-tres-barras-destacadas.png" alt="Menu Icon">
+                </div>
+                <div class="sidebar" id="sidebar">
+                    <br>
+                    <ul>
+                        <li><a href="Produtos.html">Produtos</a></li>
+                        <br>
+                        <li><a href="gabinetes.html">Gabinetes</a></li>
+                        <br>
+                        <li><a href="Periféricos.html">Periféricos</a></li>
+                        <br>
+                        <li><a href="Notebook.html">Notebook</a></li>
+                        <br>
+                        <li><a href="Peças.html">Hardware</a></li>
+                        <br>
+                        <li><a href="monitor.html">Monitor</a></li>
+                    </ul>
+                </div>
+                <!-- Sobre nós -->
+                <li><a href="Sobre.html">Sobre nós</a></li>
+                <!-- Contato -->
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Ações -->
+        <div class="actions">
+            <!-- Login / Cadastro -->
+            <a class="login" href="login.html"><img src="imagens/user-interface.png" alt="Login"> Login / Cadastro</a>
+            <!-- Carrinho -->
+            <a class="cart" href=""><img src="imagens/54895.png" alt="Carrinho"></a> &nbsp; &nbsp;
+            <!-- Formulário de pesquisa -->
+            <div class="pesquisa-container">
+                <input type="text" id="pesquisaInput" placeholder="Digite sua pesquisa">
+                <img src="imagens/lupa.png" alt="Pesquisar" class="icone-pesquisa" onclick="realizarPesquisa()">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Conteúdo da página -->
+<div class="loja">
+    <!-- Aba de Produtos em Promoção -->
+    <div class="produtos-promocao">
+        <h2>Produtos em Promoção <br> De ate 90%!</h2>
+    
+        <!-- Categoria: Gabinetes -->
+        <div class="categoria">
+            <h3>Gabinetes</h3>
+            <div class="produtos">
+            <div class="produto">
+                <div class="produto-conteudo">
+                    <a href="GGP.html"><img src="Gabinetes de PC/Gabinete Gamer Pichau HX710L.jpg" alt="Produto Gabinetes 1"></a>
+                    <h4>Gabinete Gamer Pichau HX710L</h4>
+                </div>
+                <p class="preco">Desconto de 50% <br> Preço: R$294,06.</p>
+            </div>
+            
+            <div class="produto">
+                <div class="produto-conteudo">
+                    <a href="GGPP.html"><img src="Gabinetes de PC/GABINETE GAMER PICHAU POUTER 3 RGB LATERAL DE VIDRO PRETO.jpg" alt="Produto Gabinetes 2"></a>
+                    <h4>Gabinete Gamer Pichau Pouter 3 RGB </h4>
+                </div>
+                <p class="preco">Desconto de 65% <br> Preço: R$258,64.</p>
+            </div>
+            
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GGT.html"><img src="Gabinetes de PC/Gabinete Gamer TGT Jester.jpg" alt="Produto Gabinetes 3"></a> 
+                        <h4>Gabinete Gamer TGT Jester</h4>
+                    </div>
+                    <p class="preco">Desconto de 15% <br> Preço: R$228,01.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GGTS.html"><img src="Gabinetes de PC/Gabinete Gamer TGT Skylancer Lateral De Vidro Branco.jpg" alt="Produto Gabinetes 4"></a>
+                        <h4>Gabinete Gamer TGT Skylancer Lateral </h4>
+                    </div>
+                    <p class="preco">Desconto de 25% <br> Preço: R$432,27.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GRWP.html"><img src="Gabinetes de PC/Gabinete Redragon Wideload Pro.jpg" alt="Produto Gabinetes 5"></a>
+                        <h4>Gabinete Redragon Wideload Pro</h4>
+                    </div>
+                    <p class="preco">Desconto de 45% <br> Preço: R$257,13.</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Categoria: periféricos -->
+        <div class="categoria">
+            <h3>Periféricos</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="CSRG.html"><img src="Periféricos/Caixa de Som 6W RMS Gamer RGB Som Forte Alto Falantes.jpg" alt="Produto periféricos 1"></a>
+                        <h4>Caixa de Som 6W RMS Gamer RGB</h4>
+                    </div>
+                    <p class="preco">Desconto de 30% <br> Preço: R$38,40.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MHQ.html"><img src="Periféricos/Microfone Gamer HyperX QuadCast S Podcast.jpg" alt="Produto periféricos 2"></a>
+                        <h4>Microfone Gamer HyperX QuadCast S</h4>
+                    </div>
+                    <p class="preco">Desconto de 70% <br> Preço: R$296,44.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="HGR.html"><img src="Periféricos/Headset Gamer RGB Blackfire Preto FORTREK.jpg" alt="Produto periféricos 3"></a>
+                        <h4>Headset Gamer RGB Blackfire Preto</h4>
+                    </div>
+                    <p class="preco">Desconto de 10% <br> Preço: R$87,93.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MGM.html"><img src="Periféricos/Mouse Geek Maxprint USB 2.0 com led.jpg" alt="Produto periféricos 4"></a>
+                        <h4>Mouse Geek Maxprint USB 2.0 com led</h4>
+                    </div>
+                    <p class="preco">Desconto de 10% <br> Preço: R$12,51.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="TMG.html"><img src="Periféricos/Teclado Mecânico Gamer Redragon Dark Avenger K568-2 Rgb Switch Red Com Fio.jpg" alt="Produto periféricos 5"></a>
+                        <h4>Teclado Mecânico Gamer Redragon</h4>
+                    </div>
+                    <p class="preco">Desconto de 50% <br> Preço: R$114,50.</p>
+                    </div>
+                </div>
+        </div>
+
+        <!-- Categoria: Notebook -->
+        <div class="categoria">
+            <h3>Notebook</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="NAM.html"><img src="Notebook/Notebook Apple MacBook.webp" alt="Produto Notebook 1"></a>
+                        <h4>Notebook Apple MacBook</h4>
+                    </div>
+                    <p class="preco">Desconto de 80% <br> Preço: R$1.473,68</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="NGB.html"><img src="Notebook/Galaxy Book3 Intel Core.jpg" alt="Produto Notebook 2"></a>
+                        <h4>Notebook Galaxy Book3 Intel Core</h4>
+                </div>
+                    <p class="preco">Desconto de 10% <br> Preço: R$5.399,10.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="NAV.html"><img src="Notebook/Notebook ASUS Vivobook.jpg" alt="Produto Notebook 3"></a>
+                        <h4>Notebook ASUS Vivobook</h4>
+                </div>
+                    <p class="preco">Desconto de 25% <br> Preço: R$1.848,10.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="NGA.html"><img src="Notebook/Notebook Gamer Acer Nitro.jpg" alt="Produto Notebook 4"></a>
+                        <h4>Notebook Gamer Acer Nitro</h4>
+                </div>
+                    <p class="preco">Desconto de 70% <br> Preço: R$1.499,97.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="NGAT.html"><img src="Notebook/Notebook Gamer ASUS TUF Gaming F15.jpg" alt="Produto Notebook 5"></a>
+                        <h4>Notebook Gamer ASUS TUF Gaming</h4>
+                </div>
+                    <p class="preco">Desconto de 20% <br> Preço: R$5.599,20.</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Categoria: Peças de PC -->
+        <div class="categoria">
+            <h3>Hardware</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="CFA.html"><img src="Peças de PC/Corsair FONTE ATX 750W.jpg" alt="Produto Peças 1"></a>
+                        <h4>Corsair FONTE ATX 750W</h4>
+                </div>
+                    <p class="preco">Desconto de 20% <br> Preço: R$570,53.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="KVT.html"><img src="Peças de PC/Kit Ventoinhas TGT Unger.jpg" alt="Produto Peças 2"></a>
+                        <h4>Kit Ventoinhas TGT Unger</h4>
+                </div>
+                    <p class="preco">Desconto de 15% <br> Preço: R$101,15.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="PVN.html"><img src="Peças de PC/Placa de Video NV.jpg" alt="Produto Peças 3"></a>
+                        <h4>Placa de Video NV</h4>
+                </div>
+                    <p class="preco">Desconto de 60% <br> Preço: R$1.091,52.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="PMG.html"><img src="Peças de PC/Placa Mãe Gigabyte B550M.jpg" alt="Produto Peças 4"></a>
+                        <h4>Placa Mãe Gigabyte B550M</h4>
+                </div>
+                    <p class="preco">Desconto de 45% <br> Preço: R$574,19.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="PAR.html"><img src="Peças de PC/Processador AMD Ryzen 9 7950X3D.jpg" alt="Produto Peças 5"></a>
+                        <h4>Processador AMD Ryzen 9 7950X3D</h4>
+                </div>
+                    <p class="preco">Desconto de 35% <br> Preço: R$3.745,86.</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <!-- Categoria: Monitor -->
+        <div class="categoria">
+            <h3>Monitor</h3>
+            <div class="produtos">
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MAI.html"><img src="Monitor/Apple iMac.jpg" alt="Produto Monitor 1"></a>
+                        <h4>Monitor Apple iMac</h4>
+                </div>
+                    <p class="preco">Desconto de 85% <br> Preço: R$1.709,85.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MGA.html"><img src="Monitor/Monitor Gamer Acer.jpg" alt="Produto Monitor 2"></a>
+                        <h4>Monitor Gamer Acer</h4>
+                </div>
+                    <p class="preco">Desconto de 55% <br> Preço: R$360,00.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MGO.html"><img src="Monitor/Monitor Gamer AOC.jpg" alt="Produto Monitor 3"></a>
+                        <h4>Monitor Gamer AOC</h4>
+                </div>
+                    <p class="preco">Desconto de 75% <br> Preço: R$455,26.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MPF.html"><img src="Monitor/Monitor para PC Full HD UltraWide LG.jpg" alt="Produto Monitor 4"></a>
+                        <h4>Monitor para PC Full HD UltraWide LG</h4>
+                </div>
+                    <p class="preco">Desconto de 30% <br> Preço: R$716,03.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MST.html"><img src="Monitor/Samsung T350 - Monitor Gamer.jpg" alt="Produto Monitor 5"></a>
+                        <h4>Monitor Samsung T350 - Monitor Gamer</h4>
+                </div>
+                    <p class="preco">Desconto de 45%  <br> Preço: R$521,95.</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+<!-- Rodapé da página -->
+<footer>
+    <p>&copy; 2024 TechBlock. Todos os direitos reservados.</p>
+    <div class="imagens">
+        <img src="imagens/twitter.png" alt="Imagem 1">
+        <img src="imagens/facebook.png" alt="Imagem 2">
+        <img src="imagens/instagram.png" alt="Imagem 3">
+        <img src="imagens/snapchat.png" alt="Imagem 4">
+    </div>
+</footer>
+
+<img src="imagens/oie_transparent.png" class="back-to-top" onclick="scrollToTop()" alt="Voltar ao topo">
+
+
+<br>
+</body>
+</html>

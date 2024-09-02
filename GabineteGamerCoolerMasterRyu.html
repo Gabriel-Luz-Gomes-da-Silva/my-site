@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlock - Gabinete Gamer Pichau HX710L</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="icon" href="imagens/logo.png" type="Logo">
+    <script src="script.js"></script>
+</head>
+<body>
+<header class="navbar">
+    <div class="container">
+        <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Logo"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <div class="toggle-btn" onclick="toggleSidebar()">
+                    <img src="imagens/menu-tres-barras-destacadas.png" alt="Menu Icon">
+                </div>
+                <div class="sidebar" id="sidebar">
+                    <br>
+                    <ul>
+                        <li><a href="Produtos.html">Produtos</a></li>
+                        <br>
+                        <li><a href="gabinetes.html">Gabinetes</a></li>
+                        <br>
+                        <li><a href="Periféricos.html">Periféricos</a></li>
+                        <br>
+                        <li><a href="Notebook.html">Notebook</a></li>
+                        <br>
+                        <li><a href="Peças.html">Hardware</a></li>
+                        <br>
+                        <li><a href="monitor.html">Monitor</a></li>
+                    </ul>
+                </div>
+                <li><a href="Sobre.html">Sobre nós</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="actions">
+            <a class="login" href="login.html"><img src="imagens/user-interface.png" alt="Login"> Login / Cadastro</a>
+            <a class="cart" href=""><img src="imagens/54895.png" alt="Carrinho"></a> &nbsp; &nbsp; 
+            <div class="pesquisa-container">
+                <input type="text" id="pesquisaInput" placeholder="Digite sua pesquisa">
+                <img src="imagens/lupa.png" alt="Pesquisar" class="icone-pesquisa" onclick="realizarPesquisa()">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="product">
+        <div class="product-image">
+            <img src="Gabinetes de PC/gabinete-gamer-cooler-master-td500-street-fighter-6-ryu-m-atx-atx-e-mini-itx-lateral-em-vidro-temperado-branco-td500v2-wgnn-sry_1701954832_m.jpg " alt="Gabinete Gamer">
+        </div>
+        <div class="product-info">
+            <h1>Gabinete Gamer Cooler Master TD500 Street Fighter 6 Ryu</h1>
+            <p>Descrição:
+                O Gabinete Gamer Cooler Master TD500 Street Fighter 6 Ryu é uma edição especial para fãs da franquia Street Fighter. Com um design inspirado no personagem Ryu, ele oferece painéis de vidro temperado e iluminação RGB. Compatível com placas-mãe ATX, ele proporciona excelente fluxo de ar e espaço para sistemas de refrigeração líquida.</p>
+            <div class="rating">
+                <input type="radio" id="star5" name="rating" value="5" checked disabled>
+                <label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4" checked disabled>
+                <label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3" disabled>
+                <label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2" disabled>
+                <label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1" disabled>
+                <label for="star1">&#9733;</label>
+            </div>
+            <p id="produto1" class="price" data-preco-original=>Preço: R$ 600,00</p>
+            <button class="buy-button" onclick="comprar()">Comprar</button>
+            <div class="quantity">
+                <button onclick="updateQuantity('+', 'produto1')">+</button>
+                <span id="quantityDisplay">1</span>
+                <button onclick="updateQuantity('-', 'produto1')">-</button>
+            </div>
+            <a href="" class="share-button"><img src="imagens/social.png" alt="Compartilhar"></a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 TechBlock. Todos os direitos reservados.</p>
+    <div class="imagens">
+        <img src="imagens/twitter.png" alt="Imagem 1">
+        <img src="imagens/facebook.png" alt="Imagem 2">
+        <img src="imagens/instagram.png" alt="Imagem 3">
+        <img src="imagens/snapchat.png" alt="Imagem 4">
+    </div>
+</footer>
+
+<img src="imagens/oie_transparent.png" class="back-to-top" onclick="scrollToTop()" alt="Voltar ao topo">
+
+<br>
+
+</body>
+</html>

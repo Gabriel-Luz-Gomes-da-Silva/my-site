@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>TechBlock - Monitor</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="icon" href="imagens/logo.png" type="Logo">
+    <script src="script.js"></script>
+</head>
+<body>
+   <!-- Cabeçalho da página -->
+   <header class="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Logo"></a>
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <ul>
+                    <!-- Links do menu -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Dropdown de Produtos -->
+                    <div class="toggle-btn" onclick="toggleSidebar()">
+                        <img src="imagens/menu-tres-barras-destacadas.png" alt="Menu Icon">
+                    </div>
+                    <div class="sidebar" id="sidebar">
+                        <br>
+                        <ul>
+                            <li><a href="Produtos.html">Produtos</a></li>
+                            <br>
+                            <li><a href="gabinetes.html">Gabinetes</a></li>
+                            <br>
+                            <li><a href="Periféricos.html">Periféricos</a></li>
+                            <br>
+                            <li><a href="Notebook.html">Notebook</a></li>
+                            <br>
+                            <li><a href="Peças.html">Hardware</a></li>
+                            <br>
+                            <li><a href="monitor.html">Monitor</a></li>
+                        </ul>
+                    </div>
+                    <!-- Sobre nós -->
+                    <li><a href="Sobre.html">Sobre nós</a></li>
+                    <!-- Contato -->
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Ações -->
+            <div class="actions">
+                <!-- Login / Cadastro -->
+                <a class="login" href="login.html"><img src="imagens/user-interface.png" alt="Login"> Login / Cadastro</a>
+                <!-- Carrinho -->
+                <a class="cart" href=""><img src="imagens/54895.png" alt="Carrinho"></a> &nbsp; &nbsp;
+                <!-- Formulário de pesquisa -->
+                <div class="pesquisa-container">
+                    <input type="text" id="pesquisaInput" placeholder="Digite sua pesquisa">
+                    <img src="imagens/lupa.png" alt="Pesquisar" class="icone-pesquisa" onclick="realizarPesquisa()">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo da página -->
+    <div class="container">
+        <div class="product">
+            <div class="product-image">
+                <img src="Monitor/monitor-gamer-viewsonic-omni-31-5-led-full-hd-curvo-165-hz-1ms-hdmi-e-displayport-103-srgb-freesync-premium-som-integrado-vx3218_1666798719_m.jpg" alt="Monitor">
+            </div>
+            <div class="product-info">
+                <h1>Monitor Gamer Viewsonic Omni, 32p, FHD Curvo</h1>
+                <p>Descrição:
+                    O Monitor Gamer Viewsonic Omni de 32 polegadas curvo oferece uma experiência imersiva com sua resolução Full HD (1920x1080). A curvatura da tela e a taxa de atualização de 144Hz proporcionam uma experiência de jogo suave e envolvente. O tempo de resposta rápido e a tecnologia de sincronização adaptativa reduzem o desfoque de movimento e o tearing.</p>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" checked disabled>
+                    <label for="star5">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4" disabled>
+                    <label for="star4">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3" disabled>
+                    <label for="star3">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2" disabled>
+                    <label for="star2">&#9733;</label>
+                    <input type="radio" id="star1" name="rating" value="1" disabled>
+                    <label for="star1">&#9733;</label>
+                  </div> 
+                <p class="price">Preço: R$ 1.500,00.</p>
+                <button class="buy-button" onclick="comprar()">Comprar</button>
+                <div class="quantity">
+                    <button onclick="updateQuantity('+', 'produto1')">+</button>
+                    <span id="quantityDisplay">1</span>
+                    <button onclick="updateQuantity('-', 'produto1')">-</button>
+                </div>
+                <a href="" class="share-button"><img src="imagens/social.png" alt="Compartilhar"></a>
+             
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2024 TechBlock. Todos os direitos reservados.</p>
+        <div class="imagens">
+            <img src="imagens/twitter.png" alt="Imagem 1">
+            <img src="imagens/facebook.png" alt="Imagem 2">
+            <img src="imagens/instagram.png" alt="Imagem 3">
+            <img src="imagens/snapchat.png" alt="Imagem 4">
+        </div>
+    </footer>
+
+    <img src="imagens/oie_transparent.png" class="back-to-top" onclick="scrollToTop()" alt="Voltar ao topo">
+    
+    <br>
+</body>
+</html>

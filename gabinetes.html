@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>TechBlock - Gabinetes</title>
+    <link rel="stylesheet" href="stilo.css">
+    <link rel="icon" href="imagens/logo.png" type="Logo">
+    <script src="script.js"></script>
+</head>
+<body>
+   <!-- Cabeçalho da página -->
+   <header class="navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Logo"></a>
+        <!-- Menu de navegação -->
+        <nav class="menu">
+            <ul>
+                <!--  -->
+                <li><a href="index.html">Home</a></li>
+                <!-- Dropdown de Produtos -->
+                <div class="toggle-btn" onclick="toggleSidebar()">
+                    <img src="imagens/menu-tres-barras-destacadas.png" alt="Menu Icon">
+                </div>
+                <div class="sidebar" id="sidebar">
+                    <br>
+                    <ul>
+                        <li><a href="Produtos.html">Produtos</a></li>
+                        <br>
+                        <li><a href="gabinetes.html">Gabinetes</a></li>
+                        <br>
+                        <li><a href="Periféricos.html">Periféricos</a></li>
+                        <br>
+                        <li><a href="Notebook.html">Notebook</a></li>
+                        <br>
+                        <li><a href="Peças.html">Hardware</a></li>
+                        <br>
+                        <li><a href="monitor.html">Monitor</a></li>
+                    </ul>
+                </div>
+                <!-- Sobre nós -->
+                <li><a href="Sobre.html">Sobre nós</a></li>
+                <!-- Contato -->
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <!-- Ações -->
+        <div class="actions">
+            <!-- Login / Cadastro -->
+            <a class="login" href="login.html"><img src="imagens/user-interface.png" alt="Login"> Login / Cadastro</a>
+            <!-- Carrinho -->
+            <a class="cart" href=""><img src="imagens/54895.png" alt="Carrinho"></a> &nbsp; &nbsp;
+            <!-- Formulário de pesquisa -->
+            <div class="pesquisa-container">
+                <input type="text" id="pesquisaInput" placeholder="Digite sua pesquisa">
+                <img src="imagens/lupa.png" alt="Pesquisar" class="icone-pesquisa" onclick="realizarPesquisa()">
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="loja">
+    <!-- Aba de Produtos em Promoção -->
+    <div class="produtos-promocao">
+        
+        <!-- Categoria: Gabinetes -->
+        <div class="categoria">
+            <h3>Gabinetes</h3>
+            <div class="produtos">
+            <div class="produto">
+                <div class="produto-conteudo">
+                    <a href="GGP.html"><img src="Gabinetes de PC/Gabinete Gamer Pichau HX710L.jpg" alt="Produto Gabinetes 1"></a>
+                    <h4>Gabinete Gamer Pichau HX710L</h4>
+                </div>
+                <p class="preco">Desconto de 50% <br> Preço: R$294,06.</p>
+            </div>
+            
+            <div class="produto">
+                <div class="produto-conteudo">
+                    <a href="GGPP.html"><img src="Gabinetes de PC/GABINETE GAMER PICHAU POUTER 3 RGB LATERAL DE VIDRO PRETO.jpg" alt="Produto Gabinetes 2"></a>
+                    <h4>Gabinete Gamer Pichau Pouter 3 RGB</h4>
+                </div>
+                <p class="preco">Desconto de 65% <br> Preço: R$258,64.</p>
+            </div>
+            
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GGT.html"><img src="Gabinetes de PC/Gabinete Gamer TGT Jester.jpg" alt="Produto Gabinetes 3"></a> 
+                        <h4>Gabinete Gamer TGT Jester</h4>
+                    </div>
+                    <p class="preco">Desconto de 15% <br> Preço: R$228,01.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GGTS.html"><img src="Gabinetes de PC/Gabinete Gamer TGT Skylancer Lateral De Vidro Branco.jpg" alt="Produto Gabinetes 4"></a>
+                        <h4>Gabinete Gamer TGT Skylancer Lateral </h4>
+                    </div>
+                    <p class="preco">Desconto de 25% <br> Preço: R$432,27.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GRWP.html"><img src="Gabinetes de PC/Gabinete Redragon Wideload Pro.jpg" alt="Produto Gabinetes 5"></a>
+                        <h4>Gabinete Redragon Wideload Pro</h4>
+                    </div>
+                    <p class="preco">Desconto de 45% <br> Preço: R$257,13.</p>
+                </div>
+            </div>
+        
+
+        <div class="categoria">
+            <div class="produtos">
+            <div class="produto">
+                <div class="produto-conteudo">
+                    <a href="GabineteRiseModeGalaxy.html"><img src="Gabinetes de PC/gabinete-gamer-rise-mode-galaxy-glass-lateral-em-vidro-temperado-preto-rm-ga-gg-fb_1657738212_m.jpg" alt="Produto Gabinetes 6"></a>
+                    <h4>Gabinete Gamer Rise Mode Galaxy Glass, Mid Tower</h4>
+                </div>
+                <p class="preco">Preço: R$ 350,00.</p>
+            </div>
+            
+            <div class="produto">
+                <div class="produto-conteudo">
+                    <a href="GabineteGalaxDracoBlack.html"><img src="Gabinetes de PC/gabinete-galax-draco-black-mid-tower-m-atx-frontal-de-vidro-preto-glx-draco-2061_1706040365_m.jpg" alt="Produto Gabinetes 7"></a>
+                    <h4>Gabinete Galax Draco Black, Mid tower, ATX</h4>
+                </div>
+                <p class="preco">Preço: R$400,00.</p>
+            </div>
+            
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GabineteGamerRiseModeGlass.html"><img src="Gabinetes de PC/gabinete-gamer-rise-mode-glass-06x-lateral-em-vidro-fume-e-frontal-em-vidro-temperado-preto-rm-ca-06x-fb_1660589149_m.jpg" alt="Produto Gabinetes 8"></a> 
+                        <h4>Gabinete Gamer Rise Mode Glass 06x, Vidro Frontal</h4>
+                    </div>
+                    <p class="preco">Preço: R$ 350,00.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GabineteGamerHyrax.html"><img src="Gabinetes de PC/gabinete-gamer-hyrax-hgb720-mid-tower-atx-frente-e-lateral-em-vidro-temperado-branco-hgb720w_1688578035_m.jpg" alt="Produto Gabinetes 9"></a>
+                        <h4>Gabinete Gamer Hyrax hgb720, Mid Tower Atx</h4>
+                    </div>
+                    <p class="preco">Preço: R$ 300,00.</p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GabineteAerocoolCylon.html"><img src="Gabinetes de PC/94598_3_1516964110_m.jpg" alt="Produto Gabinetes 10"></a>
+                        <h4>Gabinete Aerocool Cylon, Mid Tower, Atx, RGB LED, Preto</h4>
+                    </div>
+                    <p class="preco">Preço: R$257,13.</p>
+                </div>
+            </div>
+            
+            <div class="categoria">
+                <div class="produtos">
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GabineteGamerCoolerMasterChunLi.html"><img src="Gabinetes de PC/gabinete-gamer-cooler-master-td500-street-fighter-6-chun-li-mini-itx-m-atx-e-atx-lateral-em-vidro-temperado-branco-td500v2-wgnn-scl_1701805245_m.jpg" alt="Produto Gabinetes 11"></a>
+                        <h4>Gabinete Gamer Cooler Master TD500 Street Fighter 6 Chun</h4>
+                    </div>
+                    <p class="preco">Preço: R$ 600,00.</p>
+                </div>
+                
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="GabineteGamerTaurus.html"><img src="Gabinetes de PC/Gabinete-Gamer-Taurus-Usb-3-0-Preto-Led-Vermelho-Mymax_1714683105_m.jpg" alt="Produto Gabinetes 12"></a>
+                        <h4>Gabinete Gamer Taurus Usb 3.0, Preto</h4>
+                    </div>
+                    <p class="preco">Preço: R$ 200,00.</p>
+                </div>
+                
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="GabineteGamerCoolerMasterRyu.html"><img src="Gabinetes de PC/gabinete-gamer-cooler-master-td500-street-fighter-6-ryu-m-atx-atx-e-mini-itx-lateral-em-vidro-temperado-branco-td500v2-wgnn-sry_1701954832_m.jpg" alt="Produto Gabinetes 13"></a> 
+                            <h4>Gabinete Gamer Cooler Master TD500 Street Fighter 6 Ryu</h4>
+                        </div>
+                        <p class="preco">Preço: R$ 600,00.</p>
+                    </div>
+
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="GabineteGamerRiseZ4.html"><img src="Gabinetes de PC/gabinete-gamer-rise-mode-z4-mid-tower-atx-lateral-em-vidro-temperado-branco-rm-z4-04-fw_1713533535_m.jpg" alt="Produto Gabinetes 14"></a>
+                            <h4>Gabinete Gamer Rise Mode Z4, Mid Tower, Atx</h4>
+                        </div>
+                        <p class="preco">Preço: R$ 350,00.</p>
+                    </div>
+                    
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="GabineteGamerLiketec.html"><img src="Gabinetes de PC/gabinete-gamer-liketec-mad-rock-black-mini-tower-argb-m-atx-frente-e-lateral-em-vidro-lc-cb3x2-madrock-2041_1693327998_m.jpg" alt="Produto Gabinetes 15"></a>
+                            <h4>Gabinete Gamer Liketec Mad Rock Black, Mini Tower</h4>
+                        </div>
+                        <p class="preco"> Preço: R$ 150,00.</p>
+                    </div>
+                </div>
+    </div>
+        <br>
+
+<footer>
+    <p>&copy; 2024 TechBlock. Todos os direitos reservados.</p>
+    <div class="imagens">
+        <img src="imagens/twitter.png" alt="Imagem 1">
+        <img src="imagens/facebook.png" alt="Imagem 2">
+        <img src="imagens/instagram.png" alt="Imagem 3">
+        <img src="imagens/snapchat.png" alt="Imagem 4">
+    </div>
+</footer>
+
+<img src="imagens/oie_transparent.png" class="back-to-top" onclick="scrollToTop()" alt="Voltar ao topo">
+
+<br>
+</body>
+</html>

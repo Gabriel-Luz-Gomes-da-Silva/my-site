@@ -1,0 +1,1239 @@
+/* Estilos básicos */
+body, html {
+    margin: 0; /* Remove margens padrão para body e html */
+    padding: 0; /* Remove preenchimento padrão para body e html */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #41424C; /* Cor de fundo do site */
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: space-between; /* Espaço uniforme entre os itens */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Barra de navegação */
+.navbar {
+    background-color: #17ffec; /* Cor de fundo da barra de navegação */
+    position: sticky; /* Fixa a barra ao topo da página */
+    top: 0; /* Posiciona a barra no topo */
+    z-index: 1000; /* Garante que fique sobre outros elementos */
+    padding: 10px 0; /* Espaçamento superior e inferior */
+}
+
+/* Menu principal */
+.menu ul {
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+.menu ul li {
+    display: inline-block; /* Exibe os itens de menu em linha */
+    margin-right: 33px; /* Espaço à direita de cada item de menu */
+}
+
+.menu ul li a {
+    color: rgb(0, 0, 0); /* Cor do texto dos itens de menu */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px 36px; /* Preenchimento dos itens de menu */
+}
+
+/* Dropdown (menu suspenso) */
+.dropdown {
+    position: relative; /* Permite posicionar o dropdown relativo ao item de menu pai */
+}
+
+.dropdown-content {
+    display: none; /* Esconde o conteúdo do dropdown por padrão */
+    position: absolute; /* Posiciona o conteúdo de forma absoluta */
+    background-color: #f9f9f9; /* Cor de fundo do dropdown */
+    min-width: 160px; /* Largura mínima do dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra do dropdown */
+    z-index: 1; /* Define a ordem de empilhamento */
+    border-radius: 0.50vh; /* Raio das bordas do dropdown */
+}
+
+.dropdown-content a {
+    color: black; /* Cor do texto dos itens do dropdown */
+    padding: 12px 16px; /* Preenchimento dos itens do dropdown */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    display: block; /* Exibe os itens do dropdown como blocos */
+}
+
+/* Exibe o conteúdo do dropdown quando o item de menu pai é hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Mostra o conteúdo do dropdown */
+}
+
+.pesquisa-container {
+    margin-bottom: -0.5vh; /* Ajusta a margem inferior */
+    position: relative; /* Define o contêiner como relativo */
+    display: inline-block; /* Faz com que o contêiner ajuste seu tamanho ao conteúdo */
+}
+
+#pesquisaInput {
+    margin-bottom: -0.2vh; /* Ajusta a margem inferior */
+    padding: 10px; /* Preenchimento do campo de pesquisa */
+    width: 200px; /* Largura do campo de pesquisa */
+    border: 1px solid #ccc; /* Borda do campo de pesquisa */
+    border-radius: 5px; /* Raio das bordas do campo de pesquisa */
+    padding-right: 40px; /* Adiciona espaço para o ícone de pesquisa dentro do campo */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura total */
+}
+
+/* Ícone de pesquisa */
+.icone-pesquisa {
+    margin-bottom: -0.5vh; /* Ajusta a margem inferior */
+    width: 30px; /* Largura do ícone de pesquisa */
+    height: 30px; /* Altura do ícone de pesquisa */
+    cursor: pointer; /* Cursor em forma de mão sobre o ícone */
+    position: absolute; /* Posiciona o ícone de forma absoluta em relação ao contêiner */
+    top: 50%; /* Alinha verticalmente o ícone ao meio do campo de pesquisa */
+    right: 10px; /* Espaço do ícone a partir da borda direita do campo de pesquisa */
+    transform: translateY(-50%); /* Corrige o alinhamento vertical */
+}
+
+/* Ações e ícones */
+.actions {
+    display: flex; /* Usa flexbox para layout das ações */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo do link de login com ícone */
+.actions .login {
+    margin-right: 70px; /* Margem direita do link de login */
+    color: rgb(0, 0, 0); /* Cor do texto do link de login */
+    text-decoration: none; /* Remove o sublinhado do link de login */
+}
+
+.actions .login img {
+    vertical-align: middle; /* Alinha a imagem verticalmente ao texto */
+    width: 25px; /* Largura da imagem do link de login */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 5px; /* Margem esquerda da imagem do link de login */
+}
+
+/* Estilo do campo de pesquisa dentro das ações */
+.actions .search {
+    border-radius: 1vh; /* Raio das bordas do campo de pesquisa */
+    position: relative; /* Define a posição relativa para o campo de pesquisa */
+    margin-right: 20px; /* Margem direita do campo de pesquisa */
+    margin-left: 20px; /* Margem esquerda do campo de pesquisa */
+}
+
+.actions .search input[type=text] {
+    border-radius: 0.50vh; /* Raio das bordas do campo de pesquisa */
+    padding: 6px; /* Preenchimento do campo de pesquisa */
+    font-size: 17px; /* Tamanho da fonte do campo de pesquisa */
+    border: none; /* Remove a borda do campo de pesquisa */
+    width: 200px; /* Largura do campo de pesquisa */
+}
+
+/* Estilo do ícone do carrinho de compras */
+.actions .cart img {
+    width: 30px; /* Largura da imagem do carrinho */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo do logotipo */
+.logo {
+    flex: 1; /* Permite que o logotipo ocupe o espaço restante */
+}
+
+.logo img {
+    
+    width: 60px; /* Largura da imagem do logotipo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Seção da loja */
+.loja {
+    width: 90%; /* Largura da seção da loja */
+    max-width: 1200px; /* Largura máxima da seção da loja */
+    margin: 0 auto; /* Centraliza a seção da loja horizontalmente */
+    background-color: #41424C; /* Cor de fundo da seção da loja */
+    color: #000000; /* Cor do texto da seção da loja */
+    text-align: center; /* Centraliza o texto */
+    padding-top: 50px; /* Preenchimento superior da seção da loja */
+    padding-bottom: 50px; /* Preenchimento inferior da seção da loja */
+}
+
+/* Estilo dos cabeçalhos na seção da loja */
+.loja header h2 {
+    margin-top: 0; /* Remove a margem superior do cabeçalho */
+    font-size: 2.5em; /* Tamanho da fonte do cabeçalho */
+}
+
+.loja header p {
+    font-size: 1.25em; /* Tamanho da fonte do parágrafo */
+}
+
+/* Estilo das imagens na seção da loja */
+.imagens {
+    display: inline-block; /* Exibe as imagens em linha */
+}
+
+.imagens img {
+    width: 40px; /* Largura das imagens */
+    height: auto; /* Mantém a proporção das imagens */
+    transition: transform 0.3s ease-in-out; /* Transição suave para transformações */
+    margin-right: 10px; /* Margem direita das imagens */
+}
+
+.imagens img:last-child {
+    margin-right: 0; /* Remove a margem direita da última imagem */
+}
+
+.imagens img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 20px; /* Margem superior do rodapé */
+    text-align: center; /* Centraliza o texto do rodapé */
+    font-size: 1.2em; /* Tamanho da fonte do rodapé */
+}
+
+p {
+    color: #fff; /* Cor do texto dos parágrafos */
+    text-align: center; /* Centraliza o texto dos parágrafos */
+}
+
+p1 {
+    font-size: 21px; /* Tamanho da fonte do parágrafo 1 */
+    text-align: center; /* Centraliza o texto do parágrafo 1 */
+    color: #1fc908; /* Cor do texto do parágrafo 1 */
+}
+
+/* Estilo para categorias de produtos */
+.categoria {
+    margin-bottom: 20px; /* Espaçamento inferior entre as categorias */
+    margin-top: 20px; /* Espaçamento superior entre as categorias */
+    overflow: hidden; /* Impede que o conteúdo ultrapasse a borda */
+}
+
+/* Estilo para a grade de produtos */
+.produtos {
+    display: grid; /* Usa grid para layout de produtos */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colunas adaptativas */
+    gap: 20px; /* Espaçamento entre os produtos */
+}
+
+/* Estilo para os itens de produto */
+.produto {
+    border: 2px solid #17ffec; /* Borda sólida azul ao redor do produto */
+    border-radius: 10px; /* Borda arredondada */
+    height: 338px; /* Altura fixa do produto */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    display: flex; /* Torna o contêiner de produto um flex container */
+    flex-direction: column; /* Empilha os itens verticalmente */
+}
+
+/* Estilo para o conteúdo dentro do produto */
+.produto .produto-conteudo {
+    flex: 1; /* Expande para preencher o espaço disponível */
+    padding: 10px; /* Preenchimento do conteúdo do produto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo das imagens dos produtos */
+.produto img {
+    max-width: 100%; /* Largura máxima da imagem é 100% do contêiner pai */
+    height: 150px; /* Altura fixa da imagem */
+    border-radius: 10px 10px 0 0; /* Borda arredondada somente no topo da imagem */
+}
+
+/* Limpa floats para categorias de produtos */
+.categoria::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Estilo dos links de registro */
+.register-link a {
+    color: white; /* Cor do texto dos links de registro */
+}
+
+/* Estilo dos links de cadastro */
+.cadastro-link a {
+    color: white; /* Cor do texto dos links de cadastro */
+}
+
+/* Estilo dos cabeçalhos h1 */
+h1 {
+    font-size: 20px; /* Tamanho da fonte do cabeçalho h1 */
+    text-align: center; /* Centraliza o texto do cabeçalho h1 */
+    color: rgb(255, 255, 255); /* Cor do texto do cabeçalho h1 */
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.788); /* Sombra do texto do cabeçalho h1 */
+}
+
+/* Estilo dos cabeçalhos h2 */
+h2 {
+    font-size: 50px; /* Tamanho da fonte do cabeçalho h2 */
+    text-align: center; /* Centraliza o texto do cabeçalho h2 */
+    color: rgb(255, 255, 255); /* Cor do texto do cabeçalho h2 */
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.788); /* Sombra do texto do cabeçalho h2 */
+}
+
+/* Estilo dos cabeçalhos h3 */
+h3 {
+    font-size: 25px; /* Tamanho da fonte do cabeçalho h3 */
+    text-align: center; /* Centraliza o texto do cabeçalho h3 */
+    color: rgb(255, 255, 255); /* Cor do texto do cabeçalho h3 */
+}
+
+/* Estilo dos cabeçalhos h4 */
+h4 {
+    font-size: 17px; /* Tamanho da fonte do cabeçalho h4 */
+    text-align: center; /* Centraliza o texto do cabeçalho h4 */
+    color: rgb(255, 255, 255); /* Cor do texto do cabeçalho h4 */
+}
+
+/* Estilo dos cabeçalhos h5 */
+h5 {
+    font-size: 25px; /* Tamanho da fonte do cabeçalho h5 */
+    text-align: center; /* Centraliza o texto do cabeçalho h5 */
+    color: rgb(255, 255, 255); /* Cor do texto do cabeçalho h5 */
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.788); /* Sombra do texto do cabeçalho h5 */
+}
+
+/* Estiliza os formulários */
+form {
+    max-width: 400px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    background-color: #ffffff; /* Define a cor de fundo do formulário como branco */
+    padding: 20px; /* Adiciona preenchimento ao formulário */
+    border-radius: 8px; /* Define o raio da borda do formulário */
+    border: 3px solid #17ffec; /* Adiciona uma borda ao redor do formulário */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Adiciona uma sombra ao formulário */
+}
+
+/* Estiliza as etiquetas dentro do formulário */
+label {
+    display: block; /* Exibe as etiquetas como blocos */
+    margin-bottom: 5px; /* Adiciona margem inferior às etiquetas */
+}
+
+/* Estiliza os campos de senha */
+input[type="password"] {
+    width: 100%; /* Define a largura do campo de senha como 100% do contêiner pai */
+    padding: 10px; /* Define o preenchimento do campo de senha */
+    margin-bottom: 10px; /* Adiciona margem inferior ao campo de senha */
+    border: 1px solid #000000; /* Adiciona uma borda ao redor do campo de senha */
+    border-radius: 4px; /* Define o raio da borda do campo de senha */
+    box-sizing: border-box; /* Define o modelo de caixa */
+}
+
+/* Estiliza os campos de email */
+input[type="email"] {
+    width: 100%; /* Define a largura do campo de email como 100% do contêiner pai */
+    padding: 10px; /* Define o preenchimento do campo de email */
+    margin-bottom: 10px; /* Adiciona margem inferior ao campo de email */
+    border: 1px solid #000000; /* Adiciona uma borda ao redor do campo de email */
+    border-radius: 4px; /* Define o raio da borda do campo de email */
+    box-sizing: border-box; /* Define o modelo de caixa */
+}
+
+/* Estiliza os campos de texto, seleção, rádio e checkbox */
+input[type="text"],
+select,
+input[type="radio"],
+input[type="checkbox"] {
+    width: 100%; /* Define a largura dos campos como 100% do contêiner pai */
+    padding: 10px; /* Adiciona preenchimento aos campos */
+    margin-bottom: 10px; /* Adiciona margem inferior aos campos */
+    border: 1px solid #000000; /* Adiciona uma borda ao redor dos campos */
+    border-radius: 4px; /* Define o raio da borda dos campos */
+    box-sizing: border-box; /* Define o modelo de caixa */
+}
+
+/* Estiliza os botões de envio */
+input[type="submit"] {
+    background-color: #41424C; /* Define a cor de fundo do botão de envio */
+    color: white; /* Define a cor do texto do botão de envio como branco */
+    padding: 15px 20px; /* Define o preenchimento do botão de envio */
+    border: none; /* Remove a borda do botão de envio */
+    border-radius: 4px; /* Define o raio da borda do botão de envio */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o botão de envio */
+    width: 100%; /* Define a largura do botão de envio como 100% do contêiner pai */
+}
+
+/* Altera a cor de fundo do botão de envio ao passar o mouse sobre ele */
+input[type="submit"]:hover {
+    background-color: #5c5d65; /* Define a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estiliza os botões de rádio */
+input[type="radio"] {
+    margin-right: 5px; /* Adiciona margem à direita para separar os botões de rádio */
+}
+
+/* Estiliza os botões de checkbox */
+input[type="checkbox"] {
+    margin-right: 5px; /* Adiciona margem à direita para separar os botões de checkbox */
+}
+
+/* Especifica o posicionamento e a estilização dos botões de rádio e checkbox */
+label[for="canhoto"],
+label[for="destro"] {
+    display: inline; /* Exibe os botões de rádio e checkbox em linha */
+}
+
+/* Estiliza o container do campo de senha */
+.password-container {
+    position: relative; /* Define a posição como relativa para o posicionamento dos elementos internos */
+}
+
+/* Estiliza a imagem de mostrar/esconder senha */
+.password-container .show-password-image {
+    background-image: url('imagens/olho.png'); /* Define a imagem para mostrar/esconder senha */
+    background-size: 20px; /* Define o tamanho da imagem */
+    width: 20px; /* Define a largura da imagem */
+    height: 28px; /* Define a altura da imagem */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre a imagem */
+    position: absolute; /* Define a posição absoluta para que a imagem seja posicionada dentro do container do campo de senha */
+    top: 50%; /* Posiciona a imagem verticalmente no centro do campo de senha */
+    right: 10px; /* Posiciona a imagem à direita do campo de senha */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    transform: translateY(-50%); /* Move a imagem para cima 50% da sua própria altura para centralizá-la verticalmente */
+}
+
+/* Estiliza a imagem de mostrar/esconder senha alternativo */
+.password-container .show-password-image2 {
+    background-image: url('imagens/olho.png'); /* Define a imagem para mostrar/esconder senha */
+    background-size: 20px; /* Define o tamanho da imagem */
+    width: 20px; /* Define a largura da imagem */
+    height: 28px; /* Define a altura da imagem */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre a imagem */
+    position: absolute; /* Define a posição absoluta para que a imagem seja posicionada dentro do container do campo de senha */
+    top: 50%; /* Posiciona a imagem verticalmente no centro do campo de senha */
+    right: 10px; /* Posiciona a imagem à direita do campo de senha */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    transform: translateY(-50%); /* Move a imagem para cima 50% da sua própria altura para centralizá-la verticalmente */
+}
+
+/* Estilos para o campo de usuário */
+.username-container {
+    position: relative; /* Define a posição como relativa para o posicionamento dos elementos internos */
+}
+
+/* Estiliza o campo de usuário */
+.username-container input {
+    width: 400px; /* Define a largura do campo de usuário */
+    height: 37px; /* Define a altura do campo de usuário */
+    padding: 8px; /* Adiciona preenchimento interno ao campo de usuário */
+    margin-bottom: 10px; /* Adiciona espaço inferior ao campo de usuário */
+    border: 1px solid #000000; /* Adiciona uma borda ao redor do campo de usuário */
+    border-radius: 3px; /* Adiciona bordas arredondadas ao campo de usuário */
+}
+
+/* Estiliza a imagem do campo de usuário */
+.username-container .show-username-image {
+    background-size: 20px; /* Define o tamanho da imagem */
+    width: 20px; /* Define a largura da imagem */
+    height: 28px; /* Define a altura da imagem */
+    pointer-events: none; /* Desativa todos os eventos de ponteiro, incluindo cliques */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre a imagem */
+    position: absolute; /* Define a posição absoluta para que a imagem seja posicionada dentro do container do campo de usuário */
+    top: 50%; /* Posiciona a imagem verticalmente no centro do campo de usuário */
+    right: 10px; /* Posiciona a imagem à direita do campo de usuário */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    transform: translateY(-50%); /* Move a imagem para cima 50% da sua própria altura para centralizá-la verticalmente */
+}
+
+/* Estiliza o campo de e-mail */
+.email-container {
+    position: relative; /* Define a posição como relativa para o posicionamento dos elementos internos */
+}
+
+/* Estiliza o campo de e-mail */
+.email-container input {
+    width: 400px; /* Define a largura do campo de e-mail */
+    height: 37px; /* Define a altura do campo de e-mail */
+    padding: 8px; /* Adiciona preenchimento interno ao campo de e-mail */
+    margin-bottom: 10px; /* Adiciona espaço inferior ao campo de e-mail */
+    border: 1px solid #000000; /* Adiciona uma borda ao redor do campo de e-mail */
+    border-radius: 3px; /* Adiciona bordas arredondadas ao campo de e-mail */
+}
+
+/* Estiliza a imagem do campo de e-mail */
+.email-container .show-email-image {
+    background-size: 20px; /* Define o tamanho da imagem */
+    width: 20px; /* Define a largura da imagem */
+    height: 28px; /* Define a altura da imagem */
+    pointer-events: none; /* Desativa todos os eventos de ponteiro, incluindo cliques */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre a imagem */
+    position: absolute; /* Define a posição absoluta para que a imagem seja posicionada dentro do container do campo de e-mail */
+    top: 50%; /* Posiciona a imagem verticalmente no centro do campo de e-mail */
+    right: 10px; /* Posiciona a imagem à direita do campo de e-mail */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    transform: translateY(-50%); /* Move a imagem para cima 50% da sua própria altura para centralizá-la verticalmente */
+}
+
+/* Estilos para o layout do produto */
+.container {
+    max-width: 1200px; /* Define a largura máxima do container */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 0 20px; /* Adiciona preenchimento horizontal */
+}
+
+.product {
+    display: flex; /* Usa o layout flexível para o produto */
+    padding: 20px; /* Adiciona preenchimento ao redor do produto */
+    border-radius: 8px; /* Define a borda arredondada do produto */
+    border: 3px solid #17ffec; /* Adiciona uma borda ao redor do produto */
+    align-items: flex-start; /* Alinha os itens no topo */
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    margin-top: 50px; /* Adiciona margem superior */
+}
+
+.product-image {
+    flex: 1; /* Permite que a imagem do produto ocupe um espaço flexível */
+}
+
+.product-image img {
+    width: 450px; /* Define a largura da imagem do produto */
+    border-radius: 8px; /* Adiciona bordas arredondadas à imagem */
+    max-width: 450px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da altura da imagem */
+}
+
+.product-info {
+    padding: 20px; /* Adiciona preenchimento ao redor das informações do produto */
+    border-radius: 8px; /* Define a borda arredondada das informações do produto */
+    border: 3px solid #000000; /* Adiciona uma borda ao redor das informações do produto */
+    flex: 1; /* Permite que as informações do produto ocupem um espaço flexível */
+}
+
+.product-info h1 {
+    font-size: 24px; /* Define o tamanho da fonte para o título do produto */
+    margin-bottom: 10px; /* Adiciona margem inferior ao título */
+}
+
+.product-info p {
+    margin-bottom: 10px; /* Adiciona margem inferior aos parágrafos */
+}
+
+.product-info .price {
+    font-size: 20px; /* Define o tamanho da fonte para o preço do produto */
+    margin-bottom: 20px; /* Adiciona margem inferior ao preço */
+}
+
+.buy-button {
+    padding: 10px 20px; /* Adiciona preenchimento ao botão de compra */
+    font-size: 18px; /* Define o tamanho da fonte do botão de compra */
+    background-color: #007bff; /* Define a cor de fundo do botão de compra */
+    color: #fff; /* Define a cor do texto do botão de compra como branco */
+    border: none; /* Remove a borda do botão de compra */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão de compra */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o botão */
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Define a cor de fundo do botão de compra ao passar o mouse */
+}
+
+/* Estilos para a avaliação (rating) */
+.rating {
+    unicode-bidi: bidi-override; /* Define a direção de leitura da avaliação */
+    direction: rtl; /* Define a direção do texto da avaliação da direita para a esquerda */
+    text-align: center; /* Centraliza o texto da avaliação */
+}
+
+.rating input {
+    display: none; /* Oculta os inputs de avaliação */
+}
+
+.rating label {
+    display: inline-block; /* Exibe os rótulos em linha */
+    padding: 5px; /* Adiciona preenchimento ao redor dos rótulos */
+    font-size: 45px; /* Define o tamanho da fonte dos rótulos */
+    color: #ccc; /* Define a cor dos rótulos como cinza claro */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os rótulos */
+}
+
+.rating input:checked ~ label,
+.rating input:checked ~ label ~ label {
+    color: rgb(255, 217, 0); /* Define a cor dos rótulos como amarelo quando o input está marcado */
+}
+
+/* Estilo para o botão de compartilhamento */
+.share-button {
+    display: inline-block; /* Exibe o botão de compartilhamento em linha */
+    margin-left: 10px; /* Adiciona margem à esquerda do botão de compartilhamento */
+}
+
+.share-button img {
+    width: 30px; /* Define a largura da imagem de compartilhamento */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    vertical-align: middle; /* Alinha verticalmente a imagem com o texto */
+}
+
+/* Estilos para o wrapper do cartão */
+.card-wrapper {
+    margin-bottom: 20px; /* Adiciona margem inferior ao wrapper do cartão */
+}
+
+/* Estilos para o formulário */
+.form-size {
+    width: 300px; /* Define a largura do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+}
+
+#cc-form input {
+    width: 100%; /* Define a largura dos campos do formulário como 100% */
+    padding: 8px; /* Adiciona preenchimento interno aos campos do formulário */
+    margin-bottom: 10px; /* Adiciona margem inferior aos campos do formulário */
+    border: 1px solid #ccc; /* Adiciona uma borda aos campos do formulário */
+    border-radius: 4px; /* Define a borda arredondada dos campos do formulário */
+}
+
+#cc-form button {
+    background-color: #007bff; /* Define a cor de fundo do botão do formulário */
+    color: #fff; /* Define a cor do texto do botão como branco */
+    border: none; /* Remove a borda do botão do formulário */
+    border-radius: 4px; /* Adiciona bordas arredondadas ao botão do formulário */
+    padding: 10px 126px; /* Adiciona preenchimento ao botão do formulário */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o botão */
+}
+
+#cc-form button:hover {
+    background-color: #0056b3; /* Define a cor de fundo do botão do formulário ao passar o mouse */
+}
+
+/* Estilos para o cartão */
+.cartao {
+    display: flex; /* Usa o layout flexível para o cartão */
+    padding: 20px; /* Adiciona preenchimento ao redor do cartão */
+    border-radius: 8px; /* Define a borda arredondada do cartão */
+    background-color: #5c5d65; /* Define a cor de fundo do cartão */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    margin: auto; /* Centraliza o cartão horizontalmente */
+    max-width: 700px; /* Define a largura máxima do cartão */
+    margin-top: 40px; /* Adiciona margem superior ao cartão */
+}
+
+/* Estilos para o controle de quantidade */
+.quantity {
+    margin-bottom: 10px; /* Adiciona margem inferior ao controle de quantidade */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-left: 5px; /* Adiciona margem à esquerda do controle de quantidade */
+    display: inline-block; /* Exibe o controle de quantidade em linha */
+}
+
+.quantity button {
+    padding: 8px 12px; /* Adiciona preenchimento aos botões de quantidade */
+    margin: 0 5px; /* Adiciona margem horizontal aos botões de quantidade */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os botões */
+    border: 1px solid #e1e1e1; /* Adiciona uma borda aos botões de quantidade */
+    border-radius: 4px; /* Define a borda arredondada dos botões de quantidade */
+    background-color: #fff; /* Define a cor de fundo dos botões de quantidade como branca */
+    color: #333; /* Define a cor do texto dos botões de quantidade como cinza escuro */
+    font-size: 18px; /* Define o tamanho da fonte dos botões de quantidade */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo dos botões */
+}
+
+#quantityDisplay {
+    color: #fff; /* Define a cor do texto do display de quantidade como branco */
+}
+
+/* Estilos para os contatos */
+.contatos {
+    display: flex; /* Usa o layout flexível para os contatos */
+    flex-wrap: wrap; /* Permite que os contatos se movam para a linha seguinte se necessário */
+}
+
+.contato-info {
+    align-items: center; /* Alinha itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Adiciona margem inferior aos contatos */
+    width: calc(33.333% - 20px); /* Define a largura dos contatos como um terço da largura total menos margem */
+    margin: 10px; /* Adiciona margem em torno dos contatos */
+}
+
+.contato-info img {
+    align-items: center; /* Alinha itens verticalmente */
+    width: 35px; /* Define a largura da imagem de contato */
+    height: auto; /* Mantém a proporção da altura da imagem */
+}
+
+/* Estilos para a imagem da loja */
+.img-loja {
+    padding: 20px; /* Adiciona preenchimento ao redor da imagem da loja */
+    text-align: center; /* Centraliza a imagem da loja */
+}
+
+.img-loja img {
+    width: 500px; /* Define a largura da imagem da loja */
+    height: 300px; /* Define a altura da imagem da loja */
+    border-radius: 10px; /* Adiciona bordas arredondadas à imagem da loja */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil à imagem da loja */
+}
+  
+  /* Estilos para o sistema de avaliação por estrelas com emojis */
+.star-rating-system {
+    display: flex; /* Usa o layout flexível para o sistema de avaliação */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Contêiner para os emojis */
+.emojis-container {
+    width: 100vw; /* Define a largura do contêiner como 100% da largura da tela */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa o contêiner */
+    z-index: 10; /* Define o índice z para garantir que o contêiner fique acima de outros elementos */
+}
+
+/* Contêiner dos emojis */
+.emojis {
+    display: flex; /* Usa o layout flexível para os emojis */
+    justify-content: center; /* Centraliza os emojis horizontalmente */
+    align-items: center; /* Centraliza os emojis verticalmente */
+    width: 100%; /* Define a largura dos emojis como 100% do contêiner pai */
+    padding-left: 192px; /* Adiciona preenchimento à esquerda para o ajuste do tamanho dos emojis */
+    font-size: 64px; /* Define o tamanho da fonte dos emojis */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+/* Emojis individuais */
+.emojis .emoji {
+    opacity: 0; /* Define a opacidade dos emojis como 0 para ocultá-los */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades dos emojis */
+}
+
+/* Ajusta a posição dos emojis com base na pontuação */
+.star-rating-system[data-score="1"] .emojis {
+    transform: translateX(-64px); /* Move os emojis para a esquerda com base na pontuação */
+}
+
+.star-rating-system[data-score="2"] .emojis {
+    transform: translateX(-128px); /* Move os emojis para a esquerda com base na pontuação */
+}
+
+.star-rating-system[data-score="3"] .emojis {
+    transform: translateX(-192px); /* Move os emojis para a esquerda com base na pontuação */
+}
+
+.star-rating-system[data-score="4"] .emojis {
+    transform: translateX(-256px); /* Move os emojis para a esquerda com base na pontuação */
+}
+
+.star-rating-system[data-score="5"] .emojis {
+    transform: translateX(-320px); /* Move os emojis para a esquerda com base na pontuação */
+}
+
+/* Define a opacidade dos emojis com base na pontuação */
+.star-rating-system[data-score="1"] .emojis .emoji:nth-child(1) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="2"] .emojis .emoji:nth-child(2) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="3"] .emojis .emoji:nth-child(3) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="4"] .emojis .emoji:nth-child(4) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="5"] .emojis .emoji:nth-child(5) {
+    opacity: 1;
+}
+
+/* Estilos para a barra de avaliação */
+.star-rating {
+    display: flex; /* Usa o layout flexível para a barra de avaliação */
+    justify-content: space-between; /* Distribui o espaço entre as estrelas */
+    align-items: center; /* Alinha as estrelas verticalmente */
+    background: rgba(255, 255, 255, 0.32); /* Define a cor de fundo com opacidade */
+    border-radius: 9999px; /* Adiciona bordas totalmente arredondadas */
+    padding: 12px 24px; /* Adiciona preenchimento ao redor das estrelas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.32); /* Adiciona uma sombra ao redor da barra de avaliação */
+    backdrop-filter: blur(16px); /* Adiciona um filtro de desfoque ao fundo da barra de avaliação */
+}
+
+/* Estilos para as estrelas individuais */
+.star-rating .star {
+    font-size: 32px; /* Define o tamanho da fonte das estrelas */
+    padding: 4px; /* Adiciona preenchimento ao redor das estrelas */
+    filter: grayscale(0); /* Remove o filtro de escala de cinza das estrelas */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre as estrelas */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades das estrelas */
+}
+
+/* Efeito hover para as estrelas */
+.star-rating .star:hover {
+    transform: translateY(-4px); /* Move a estrela para cima ao passar o mouse */
+}
+
+/* Remove o preenchimento à esquerda da primeira estrela */
+.star-rating .star:first-child {
+    padding-left: 0;
+}
+
+/* Remove o preenchimento à direita da última estrela */
+.star-rating .star:last-child {
+    padding-right: 0;
+}
+
+/* Define o filtro de escala de cinza para estrelas não selecionadas com base na pontuação */
+.star-rating-system[data-score="1"] .star-rating .star:nth-child(n + 2) {
+    filter: grayscale(1);
+}
+
+.star-rating-system[data-score="2"] .star-rating .star:nth-child(n + 3) {
+    filter: grayscale(1);
+}
+
+.star-rating-system[data-score="3"] .star-rating .star:nth-child(n + 4) {
+    filter: grayscale(1);
+}
+
+.star-rating-system[data-score="4"] .star-rating .star:nth-child(n + 5) {
+    filter: grayscale(1);
+}
+
+/* Estilos para o fundo com emojis grandes */
+.background {
+    position: absolute; /* Posiciona o fundo de forma absoluta em relação ao contêiner pai */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Define a largura do fundo como 100% da largura da tela */
+    height: 100vh; /* Define a altura do fundo como 100% da altura da tela */
+    display: flex; /* Usa o layout flexível para o fundo */
+    justify-content: center; /* Centraliza o fundo horizontalmente */
+    align-items: center; /* Centraliza o fundo verticalmente */
+    filter: blur(12px); /* Adiciona um filtro de desfoque ao fundo */
+    z-index: 0; /* Define o índice z para garantir que o fundo fique atrás de outros elementos */
+}
+
+/* Estilos para os emojis de fundo grandes */
+.background-emojis {
+    display: flex; /* Usa o layout flexível para os emojis de fundo */
+    justify-content: center; /* Centraliza os emojis horizontalmente */
+    align-items: center; /* Centraliza os emojis verticalmente */
+    font-size: 256px; /* Define o tamanho da fonte dos emojis de fundo */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+/* Estilos para os emojis individuais de fundo */
+.background-emojis .emoji {
+    width: 100vw; /* Define a largura dos emojis de fundo como 100% da largura da tela */
+    text-align: center; /* Centraliza o texto dos emojis de fundo */
+    opacity: 0; /* Define a opacidade dos emojis de fundo como 0 para ocultá-los */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades dos emojis de fundo */
+}
+  
+  /* Estilos para o sistema de avaliação por estrelas com emojis de fundo */
+.star-rating-system {
+    display: flex; /* Usa o layout flexível para o sistema de avaliação */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Ajusta a posição dos emojis de fundo com base na pontuação */
+.star-rating-system[data-score="1"] .background-emojis {
+    transform: translateX(100vw); /* Move os emojis para fora da tela à direita */
+}
+
+.star-rating-system[data-score="2"] .background-emojis {
+    transform: translateX(50vw); /* Move os emojis para a esquerda, mas ainda visível */
+}
+
+.star-rating-system[data-score="3"] .background-emojis {
+    transform: translateX(0); /* Mantém os emojis na posição original */
+}
+
+.star-rating-system[data-score="4"] .background-emojis {
+    transform: translateX(-50vw); /* Move os emojis para a esquerda */
+}
+
+.star-rating-system[data-score="5"] .background-emojis {
+    transform: translateX(-100vw); /* Move os emojis completamente para fora da tela à esquerda */
+}
+
+/* Define a opacidade dos emojis de fundo com base na pontuação */
+.star-rating-system[data-score="1"] .background-emojis .emoji:nth-child(1) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="2"] .background-emojis .emoji:nth-child(2) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="3"] .background-emojis .emoji:nth-child(3) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="4"] .background-emojis .emoji:nth-child(4) {
+    opacity: 1;
+}
+
+.star-rating-system[data-score="5"] .background-emojis .emoji:nth-child(5) {
+    opacity: 1;
+}
+
+/* Estilos para a barra de avaliação */
+.star-rating {
+    display: flex; /* Usa o layout flexível para a barra de avaliação */
+    direction: row-reverse; /* Inverte a direção das estrelas na barra */
+    justify-content: center; /* Centraliza a barra de avaliação */
+    padding: 20px; /* Adiciona preenchimento ao redor das estrelas */
+}
+
+/* Estilos para as estrelas da avaliação */
+.star-rating input {
+    display: none; /* Oculta os inputs de estrela */
+}
+
+.star-rating label {
+    font-size: 2em; /* Define o tamanho da fonte das estrelas */
+    color: gray; /* Define a cor padrão das estrelas */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre as estrelas */
+}
+
+.star-rating input:checked ~ label,
+.star-rating input:checked ~ label ~ label {
+    color: gold; /* Altera a cor das estrelas selecionadas para ouro */
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold; /* Altera a cor das estrelas ao passar o mouse para ouro */
+}
+
+/* Estilos para os botões de curtir/descurtir */
+.like-dislike-buttons {
+    display: flex; /* Usa o layout flexível para os botões */
+    justify-content: center; /* Centraliza os botões */
+    margin: 20px; /* Adiciona margem ao redor dos botões */
+}
+
+.like-dislike-buttons button {
+    font-size: 1.5em; /* Define o tamanho da fonte dos botões */
+    margin: 0 10px; /* Adiciona margem horizontal entre os botões */
+    padding: 10px 10px; /* Adiciona preenchimento ao redor do texto dos botões */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre os botões */
+}
+
+/* Estilos para o formulário */
+form {
+    max-width: 400px; /* Define a largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    background-color: #ffffff; /* Define a cor de fundo do formulário como branco */
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo do formulário */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao formulário */
+    border: 3px solid #17ffec; /* Adiciona uma borda ao redor do formulário */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Adiciona uma sombra ao formulário */
+}
+
+/* Estilo para a área de texto do formulário */
+#comments {
+    resize: none; /* Impede o redimensionamento da área de texto */
+}
+
+/* Estilo para o botão de envio do formulário */
+button[type="submit"] {
+    background-color: #4CAF50; /* Define a cor de fundo do botão como verde */
+    border: none; /* Remove a borda do botão */
+    color: white; /* Define a cor do texto do botão como branco */
+    padding: 15px 134.9px; /* Adiciona preenchimento ao redor do texto do botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    text-decoration: none; /* Remove a decoração do texto do botão */
+    display: inline-block; /* Exibe o botão como um bloco em linha */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Altera a cor de fundo para verde mais escuro ao passar o mouse */
+}
+
+/* Estilos para o botão de voltar ao topo */
+.back-to-top {
+    position: fixed; /* Posiciona o botão fixo na tela */
+    bottom: 20px; /* Define a distância do botão ao fundo da tela */
+    right: 20px; /* Define a distância do botão à direita da tela */
+    display: none; /* Oculta o botão inicialmente */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o botão */
+    width: 50px; /* Define a largura do botão */
+    height: 50px; /* Define a altura do botão */
+    transition: transform 0.3s; /* Adiciona uma transição suave para a transformação */
+}
+
+.back-to-top:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do botão ao passar o mouse */
+}
+
+/* Animação para o botão de voltar ao topo */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.back-to-top.show {
+    display: block; /* Exibe o botão quando a classe 'show' está presente */
+    animation: slideInUp 0.5s ease-out; /* Adiciona uma animação ao exibir o botão */
+}
+
+/* Estilo para o preço original riscado */
+.original-price {
+    font-size: 0.9em; /* Define o tamanho da fonte do preço original */
+    color: red; /* Define a cor do texto como vermelho */
+    text-decoration: line-through; /* Adiciona uma linha sobre o texto */
+}
+
+/* Estilo para desativar o scroll */
+.no-scroll {
+    overflow: hidden; /* Desativa o scroll na página */
+}
+
+/* Estilos para a sidebar */
+.sidebar {
+    display: none; /* Esconde a sidebar por padrão */
+    width: 200px; /* Define a largura da sidebar */
+    height: 100%; /* Define a altura da sidebar como 100% da altura da tela */
+    top: 0; /* Alinha a sidebar ao topo da página */
+    background-color: #14f7e4; /* Define a cor de fundo da sidebar */
+    color: #ecf0f1; /* Define a cor do texto da sidebar */
+    padding: 20px; /* Adiciona preenchimento ao redor do conteúdo da sidebar */
+    position: fixed; /* Posiciona a sidebar fixamente na tela */
+    padding-top: 60px; /* Adiciona espaço no topo para o conteúdo */
+    left: 0; /* Alinha a sidebar à esquerda da tela */
+    transition: left 0.3s ease; /* Adiciona uma transição suave para a posição da sidebar */
+}
+
+/* Estilos para a lista de itens da sidebar */
+.sidebar ul {
+    list-style-type: none; /* Remove as marcas de lista */
+    padding: 0; /* Remove o preenchimento */
+}
+
+/* Estilos para itens individuais da lista da sidebar */
+.sidebar ul li {
+    margin: 5px 0; /* Adiciona margem vertical entre os itens */
+}
+
+/* Estilos para links dentro da sidebar */
+.sidebar ul li a {
+    color: #000000; /* Define a cor do texto dos links */
+    text-decoration: none; /* Remove a decoração do texto dos links */
+    display: block; /* Exibe os links como blocos */
+    padding: 10px; /* Adiciona preenchimento ao redor do texto dos links */
+    border-radius: 5px; /* Adiciona bordas arredondadas aos links */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+/* Estilo para links quando o mouse está sobre eles */
+.sidebar ul li a:hover {
+    background-color: #11b4a6; /* Altera a cor de fundo dos links ao passar o mouse */
+}
+
+/* Estilos para o botão de alternância da sidebar */
+.toggle-btn {
+    position: fixed; /* Posiciona o botão fixo na tela */
+    top: 20px; /* Define a distância do botão do topo da tela */
+    left: 20px; /* Define a distância do botão da lateral esquerda da tela */
+    cursor: pointer; /* Altera o cursor para um ponteiro quando passa sobre o botão */
+    z-index: 1000; /* Define a prioridade de empilhamento do botão, garantindo que ele fique acima da maioria dos outros elementos */
+}
+
+/* Estilos para a imagem dentro do botão de alternância */
+.toggle-btn img {
+    position: fixed; /* Fixa a posição da imagem na tela */
+    top: 24px; /* Define a posição da imagem em relação ao topo da tela */
+    left: 35px; /* Define a posição da imagem em relação à lateral esquerda da tela */
+    width: 40px; /* Define a largura da imagem */
+    z-index: 1001; /* Garante que a imagem fique acima do botão de alternância */
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    .toggle-btn {
+        top: 10px; /* Ajusta a distância do botão do topo em telas menores */
+        left: 10px; /* Ajusta a distância do botão da lateral esquerda em telas menores */
+    }
+
+    .toggle-btn img {
+        top: 14px; /* Ajusta a posição da imagem no botão em telas menores */
+        left: 20px; /* Ajusta a posição da imagem na lateral esquerda em telas menores */
+        width: 30px; /* Reduz a largura da imagem em telas menores */
+    }
+
+    .sidebar {
+        width: 100%; /* Faz com que a sidebar ocupe a largura total da tela em dispositivos móveis */
+    }
+
+    .product {
+        flex-direction: column; /* Empilha as informações do produto verticalmente em telas menores */
+    }
+
+    .product-image img {
+        width: 100%; /* Faz com que a imagem do produto ocupe a largura total disponível */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .star-rating {
+        flex-direction: column; /* Empilha as estrelas verticalmente em telas menores */
+    }
+
+    .star-rating .star {
+        font-size: 24px; /* Reduz o tamanho das estrelas em telas menores */
+    }
+
+    .background-emojis {
+        font-size: 128px; /* Ajusta o tamanho dos emojis no fundo em telas menores */
+    }
+
+    .like-dislike-buttons button {
+        font-size: 1.2em; /* Ajusta o tamanho dos botões de like/dislike em telas menores */
+    }
+
+    form {
+        width: 90%; /* Faz com que o formulário ocupe 90% da largura da tela em dispositivos móveis */
+        padding: 10px; /* Ajusta o preenchimento do formulário */
+    }
+
+    .cartao {
+        max-width: 100%; /* Faz com que o cartão ocupe toda a largura disponível em dispositivos móveis */
+        margin: 20px 0; /* Ajusta a margem superior e inferior */
+    }
+
+    .contato-info {
+        width: 100%; /* Faz com que cada item de contato ocupe toda a largura disponível */
+    }
+}
+
+/* Navbar Base */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #17ffec;
+    
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar .menu a:hover {
+    background-color: #14e5d4;
+    border-radius: 4px;
+}
+
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.navbar .search-bar button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar .search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Sidebar Toggle Button */
+
+
+.toggle-btn img {
+    width: 40px;
+    height: auto;
+}
+
+/* Navbar Responsiva para Celulares */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .menu {
+        display: none; /* Esconde o menu por padrão */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .menu.show {
+        display: flex; /* Exibe o menu quando ativado */
+    }
+
+    .navbar .menu a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .toggle-btn {
+        display: block; /* Exibe o botão de toggle para mobile */
+    }
+    
+    .navbar .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar .search-bar input {
+        width: calc(100% - 110px); /* Ajusta a largura do campo de pesquisa */
+    }
+
+    .navbar .search-bar button {
+        width: 100px; /* Define a largura do botão */
+    }
+}
+
+/* Responsividade da Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Largura total da tela para a sidebar */
+        display: none; /* Oculta a sidebar por padrão */
+    }
+
+    .sidebar.show {
+        display: block; /* Exibe a sidebar quando ativada */
+    }
+}

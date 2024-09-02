@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título da página -->
+    <title>TechBlock - Periféricos</title>
+    <link rel="stylesheet" href="stilo.css" />
+    <link rel="icon" href="imagens/logo.png" type="Logo" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Cabeçalho da página -->
+    <header class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Logo" /></a>
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <ul>
+                    <!-- Links do menu -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- Dropdown de Produtos -->
+                    <div class="toggle-btn" onclick="toggleSidebar()">
+                        <img src="imagens/menu-tres-barras-destacadas.png" alt="Menu Icon">
+                    </div>
+                    <div class="sidebar" id="sidebar">
+                        <br>
+                        <ul>
+                            <li><a href="Produtos.html">Produtos</a></li>
+                            <br>
+                            <li><a href="gabinetes.html">Gabinetes</a></li>
+                            <br>
+                            <li><a href="Periféricos.html">Periféricos</a></li>
+                            <br>
+                            <li><a href="Notebook.html">Notebook</a></li>
+                            <br>
+                            <li><a href="Peças.html">Hardware</a></li>
+                            <br>
+                            <li><a href="monitor.html">Monitor</a></li>
+                        </ul>
+                    </div>
+                    <!-- Sobre nós -->
+                    <li><a href="Sobre.html">Sobre nós</a></li>
+                    <!-- Contato -->
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Ações -->
+            <div class="actions">
+                <!-- Login / Cadastro -->
+                <a class="login" href="login.html"><img src="imagens/user-interface.png" alt="Login" /> Login /
+                    Cadastro</a>
+                <!-- Carrinho -->
+                <a class="cart" href=""><img src="imagens/54895.png" alt="Carrinho" /></a>
+                &nbsp; &nbsp;
+                <!-- Formulário de pesquisa -->
+                <div class="pesquisa-container">
+                    <input type="text" id="pesquisaInput" placeholder="Digite sua pesquisa">
+                    <img src="imagens/lupa.png" alt="Pesquisar" class="icone-pesquisa" onclick="realizarPesquisa()">
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="loja">
+        <!-- Aba de Produtos em Promoção -->
+        <div class="produtos-promocao">
+
+            <div class="categoria">
+                <h3>Periféricos</h3>
+                <div class="produtos">
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="CSRG.html"><img
+                                    src="Periféricos/Caixa de Som 6W RMS Gamer RGB Som Forte Alto Falantes.jpg"
+                                    alt="Produto periféricos 1" /></a>
+                            <h4>Caixa de Som 6W RMS Gamer RGB</h4>
+                        </div>
+                        <p class="preco">
+                            Desconto de 30% <br />
+                            Preço: R$38,40.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="MHQ.html"><img src="Periféricos/Microfone Gamer HyperX QuadCast S Podcast.jpg"
+                                    alt="Produto periféricos 2" /></a>
+                            <h4>Microfone HyperX Quadcast S, RGB</h4>
+                        </div>
+                        <p class="preco">
+                            Desconto de 70% <br />
+                            Preço: R$296,44.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="HGR.html"><img src="Periféricos/Headset Gamer RGB Blackfire Preto FORTREK.jpg"
+                                    alt="Produto periféricos 3" /></a>
+                            <h4>Headset Gamer RGB Blackfire Preto</h4>
+                        </div>
+                        <p class="preco">
+                            Desconto de 10% <br />
+                            Preço: R$87,93.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="MGM.html"><img src="Periféricos/Mouse Geek Maxprint USB 2.0 com led.jpg"
+                                    alt="Produto periféricos 4" /></a>
+                            <h4>Mouse Geek Maxprint USB 2.0 com led</h4>
+                        </div>
+                        <p class="preco">
+                            Desconto de 10% <br />
+                            Preço: R$12,51.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="TMG.html"><img
+                                    src="Periféricos/Teclado Mecânico Gamer Redragon Dark Avenger K568-2 Rgb Switch Red Com Fio.jpg"
+                                    alt="Produto periféricos 5" /></a>
+                            <h4>Teclado Mecânico Gamer Redragon</h4>
+                        </div>
+                        <p class="preco">
+                            Desconto de 50% <br />
+                            Preço: R$114,50.
+                        </p>
+                    </div>
+                </div>
+            </div>
+             
+            <div class="categoria">
+                
+                <div class="produtos">
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="Headset-Gamer-Cougar-Spettro.html"><img
+                                    src="Periféricos/cgr-spettro-b01.jpg"
+                                    alt="Produto periféricos 6" /></a>
+                            <h4>Headset Gamer Cougar Spettro, Bluetooth, Drivers </h4>
+                        </div>
+                        <p class="preco">
+                           
+                            Preço: R$ 300,00.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="MouseGamerRazerBasiliskV3.html"><img src="Periféricos/rz01-04000100-r3m1.jpg"
+                                    alt="Produto periféricos 7" /></a>
+                            <h4>Mouse Gamer Razer Basilisk V3, RGB, 26000DPI</h4>
+                        </div>
+                        <p class="preco">
+                           
+                            Preço: R$ 450,00.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="CaixaDeSomRedragonOrchestra.html"><img src="Periféricos/gs8114.jpg"
+                                    alt="Produto periféricos 8" /></a>
+                            <h4>Caixa de Som Redragon Orchestra, RGB, 7W RMS</h4>
+                        </div>
+                        <p class="preco">
+                          
+                            Preço: R$ 200,00.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="MesaDigitalizadoraXP.html"><img src="Periféricos/it850b_bk3.jpg"
+                                    alt="Produto periféricos 9" /></a>
+                            <h4>Mesa Digitalizadora XP-Pen Deco MW IT850B</h4>
+                        </div>
+                        <p class="preco">
+                        
+                            Preço: R$ 600,00.
+                        </p>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-conteudo">
+                            <a href="TecladoMecanicoAkkoTanjirou.html"><img
+                                    src="Periféricos/akko-5108b-tanjirou5.jpg"
+                                    alt="Produto periféricos 10" /></a>
+                            <h4>Teclado Mecânico Gamer Akko 510B Plus Tanjirou, RGB</h4>
+                        </div>
+                        <p class="preco">
+                          
+                            Preço: R$ 800,00.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="categoria">
+        
+            <div class="produtos">
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="HeadsetHavitH2002D.html"><img
+                                src="Periféricos/h2002d_2.jpg"
+                                alt="Produto periféricos 11" /></a>
+                        <h4>Headset Havit H2002D, Drivers 53m, Preto e Verde</h4>
+                    </div>
+                    <p class="preco">
+                       
+                        Preço: R$ 250,00.
+                    </p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="TecladoMecanicoAkkoNezuko.html"><img src="Periféricos/akko-5108b-nezuko4.jpg"
+                                alt="Produto periféricos 12" /></a>
+                        <h4>Teclado Mecânico Gamer Akko 510B Plus Nezuko, RGB</h4>
+                    </div>
+                    <p class="preco">
+                       
+                        Preço: R$ 800,00.
+                    </p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="WebcamLogitechc920s.html"><img src="Periféricos/webcam-logitech-c920s-pro-full-hd-1080p-30-fps-audio-estereo-com-microfones-960-001257_1613999712_m.jpeg"
+                                alt="Produto periféricos 13" /></a>
+                        <h4>Webcam Logitech c920s Pro Full HD</h4>
+                    </div>
+                    <p class="preco">
+                        Preço: R$ 350,00.
+                    </p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MonitorDeReferenciaEdifier.html"><img src="Periféricos/r1000t4-madeira2.jpg"
+                                alt="Produto periféricos 14" /></a>
+                        <h4>Monitor de Referencia Edifier R1000T4 2.0 24W RMS Madeira</h4>
+                    </div>
+                    <p class="preco">
+                      
+                        Preço: R$ 450,00.
+                    </p>
+                </div>
+                <div class="produto">
+                    <div class="produto-conteudo">
+                        <a href="MouseLogitechMXMaster.html"><img
+                                src="Periféricos/910-006561.jpg"
+                                alt="Produto periféricos 15" /></a>
+                        <h4>Mouse Logitech MX Master 3S, 8000DPI, 6 Botoes, Preto</h4>
+                    </div>
+                    <p class="preco">
+                        
+                        Preço: R$ 500,00.
+                    </p>
+                </div>
+            </div> 
+        </div>
+    
+
+
+        <br>
+
+    <footer>
+        <p>&copy; 2024 TechBlock. Todos os direitos reservados.</p>
+        <div class="imagens">
+            <img src="imagens/twitter.png" alt="Imagem 1" />
+            <img src="imagens/facebook.png" alt="Imagem 2" />
+            <img src="imagens/instagram.png" alt="Imagem 3" />
+            <img src="imagens/snapchat.png" alt="Imagem 4" />
+        </div>
+    </footer>
+
+    <img src="imagens/oie_transparent.png" class="back-to-top" onclick="scrollToTop()" alt="Voltar ao topo">
+
+    <br>
+</body>
+
+</html>
